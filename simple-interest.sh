@@ -1,16 +1,11 @@
-#!/bin/bash
-
-# Single prompt for all inputs
-read -p "Enter Principal, Rate, and Time (separated by spaces): " principal rate time
-
-# Calculate simple interest using bc to handle decimals
-si=$(echo "scale=2; ($principal * $rate * $time) / 100" | bc)
-
-# Calculate total amount
-total=$(echo "scale=2; $principal + $si" | bc)
-
-# Display results
-echo "-----------------------------------"
-echo "Simple Interest: $si"
-echo "Total Amount:    $total"
-echo "-----------------------------------"
+\#!/bin/bash
+echo"enter principle amount:"
+read p
+echo"enter rate of interest:"
+read r
+echo"enter time period:"
+read t
+interest=$(echo"scale=2;
+($p\*$r\*$t)/100"|bc)
+echo"simple interest is:
+$interest"
